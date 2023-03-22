@@ -20,7 +20,7 @@
         <q-btn
             v-if="isGamePlaying"
             :disable="isHangDisabled"
-            label="Hang the man!"
+            label="Submit"
             @click="hangmanGuess"
             outline
             class="qbutton"
