@@ -87,11 +87,13 @@ export default {
         hangmanGuess () {
             if (this.guess.match(REG) === null) {
                 alert('Please try alphabets only.')
+                this.guess = ''
                 return
             }
             this.guess = this.guess.toLowerCase()
             if (this.wrongGuesses.includes(this.guess)) {
                 alert('Oops! You have tried this one already.')
+                this.guess = ''
                 return
             }
             this.$api.post('api/hangman', {
