@@ -89,6 +89,7 @@ export default {
                 alert('Please try alphabets only.')
                 return
             }
+            this.guess = this.guess.toLowerCase()
             if (this.wrongGuesses.includes(this.guess)) {
                 alert('Oops! You have tried this one already.')
                 return
