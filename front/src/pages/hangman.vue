@@ -19,9 +19,9 @@
         </p>
         <q-btn
             v-if="isGamePlaying"
-            :disable="isHangDisabled"
+            :disable="isSubmitDisabled"
             label="Submit"
-            @click="hangmanGuess"
+            @click="submitGuess"
             outline
             class="qbutton"
         />
@@ -62,7 +62,7 @@ export default {
         remainGuess () {
             return (MAX_NUM_OF_GUESS - this.currentNumOfGuess)
         },
-        isHangDisabled () {
+        isSubmitDisabled () {
             return (this.guess.length !== 1)
         },
         isGamePlaying () {
@@ -83,7 +83,7 @@ export default {
         }
     },
     methods: {
-        hangmanGuess () {
+        submitGuess () {
             if (this.guess.match(REG) === null) {
                 alert('Please try alphabets only.')
                 this.guess = ''
