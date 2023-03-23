@@ -41,7 +41,6 @@
 const MAX_NUM_OF_GUESS = 6
 const REG = /[A-Za-z]/g
 
-// import { api } from 'boot/axios'
 import animation from 'src/components/animation.vue'
 
 export default {
