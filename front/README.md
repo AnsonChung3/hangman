@@ -30,6 +30,8 @@ With Docker, presuming the frontend is running on 8080, run
 docker build -t hangman_backend .
 docker run --name hangman_backend_container -d -p 8181:8080 hangman_backend
 ```
+8181 is a solid requirement to run this project because it's configed in the frontend
+
 When done, easy stop and clean up, run
 ```
 docker kill hangman_backend_container && docker rm hangman_backend_container
