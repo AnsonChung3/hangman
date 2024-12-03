@@ -1,9 +1,10 @@
 const routes = [
     {
-        path: '/hangman',
+        path: '/',
         component: () => import('layouts/SolarizedDarkLayout.vue'),
         children: [
-            { path: '', component: () => import('pages/hangman.vue') }
+            { path: '', redirect: 'hangman' },
+            { path: 'hangman', component: () => import('pages/hangman.vue') }
         ]
     },
 
